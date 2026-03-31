@@ -16,7 +16,7 @@
     <div class="filters">
       <input type="date" id="startDate" />
       <input type="date" id="endDate" />
-      <button>Get Space Images</button>
+      <button id="getImagesBtn">Get Space Images</button>
     </div>
 
     <div id="gallery" class="gallery">
@@ -24,6 +24,18 @@
         <div class="placeholder-icon">🔭</div>
         <p>Select a date range and click "Get Space Images" to explore the cosmos!</p>
       </div>
+    </div>
+  </div>
+
+  <div id="apodModal" class="modal hidden" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button id="closeModalBtn" class="close-modal" aria-label="Close modal">&times;</button>
+      <img id="modalImage" src="" alt="" class="modal-image" />
+      <iframe id="modalVideo" class="modal-video hidden" title="NASA APOD video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <a id="modalVideoLink" class="modal-video-link hidden" href="#" target="_blank" rel="noopener noreferrer">Open video in a new tab</a>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDate" class="modal-date"></p>
+      <p id="modalExplanation" class="modal-explanation"></p>
     </div>
   </div>
 
